@@ -25,6 +25,7 @@ script:
 
 # build and deploy binaries
 before_deploy:
+  - pip3 install pyinstaller
   - pyinstaller --onefile --clean main.py
 deploy:
   provider: releases
